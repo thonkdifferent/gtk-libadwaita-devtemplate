@@ -1,6 +1,6 @@
 {
     "id": "gnome-gtk",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "name": "GNOME app template",
     "publisher": "ThonkDifferent",
     "description": "Develop GTK 4 + Libawdaita applications on Linux. Requires Wayland on host",

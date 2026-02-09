@@ -6,6 +6,9 @@ services:
       dockerfile: Dockerfile
     volumes:
       - type: bind
+        source: /run/user/${templateOption:hostUserId}/wayland-0
+        target: /run/user/1001/wayland-0
+      - type: bind
         source: /run/dbus/system_bus_socket
         target: /run/dbus/system_bus_socket
     devices:

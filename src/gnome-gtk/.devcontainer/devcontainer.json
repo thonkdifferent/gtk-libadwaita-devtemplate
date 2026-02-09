@@ -2,9 +2,6 @@
     "name": "GTK/Libadwaita App",
     "dockerComposeFile": "compose.yaml",
     "service": "app",
-    "mounts": [
-        "source=/run/${templateOption:hostUserId}/wayland-0,target=/run/user/1001/wayland-0,type=bind,consistency=delegated"
-    ],
     "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
     "remoteUser": "vscode",
     "postStartCommand": "echo 'if ! pgrep -x dbus-daemon > /dev/null; then eval $(dbus-launch --sh-syntax); else echo \"D-Bus running\"; fi' >> /home/vscode/.bashrc; xdg-user-dirs-update --force",
