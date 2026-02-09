@@ -2,9 +2,8 @@
     "name": "GtkRsTest",
     "dockerComposeFile": "compose.yaml",
     "service": "app",
-    "workspaceFolder": "/workspaces/gtk-rs-tests",
-    "mounts": [ //probably not needed
-        "source=${localWorkspaceFolder},target=/workspaces/gtk-rs-tests,type=bind,consistency=delegated"
+    "mounts": [
+        "source=${localEnv:XDG_RUNTIME_DIR}/wayland-0,target=/run/user/1001/wayland-0,type=bind,consistency=delegated"
     ],
     "remoteUser": "vscode",
     "postStartCommand": "echo 'if ! pgrep -x dbus-daemon > /dev/null; then eval $(dbus-launch --sh-syntax); else echo \"D-Bus running\"; fi' >> /home/vscode/.bashrc; xdg-user-dirs-update --force",

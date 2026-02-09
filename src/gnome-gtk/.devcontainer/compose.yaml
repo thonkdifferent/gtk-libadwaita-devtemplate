@@ -1,14 +1,10 @@
 services:
-
   app:
     container_name: gtk_app_container
     build: 
       context: .
       dockerfile: Dockerfile
     volumes:
-      - type: bind
-        source: $XDG_RUNTIME_DIR/wayland-0
-        target: /run/user/1001/wayland-0
       - type: bind
         source: /run/dbus/system_bus_socket
         target: /run/dbus/system_bus_socket
