@@ -19,12 +19,8 @@ jobs:
           publish-templates: "true"
           base-path-to-templates: "./src"
           generate-docs: "true"
-
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Pull latest changes before pushing
-        run: |
-          git pull --rebase origin ${{ github.head_ref || github.ref_name }}
       - name: Create PR for Documentation
         id: push_image_info
         env:
@@ -36,7 +32,7 @@ jobs:
           # Configure git and Push updates
           git config --global user.email github-actions[bot]@users.noreply.github.com
           git config --global user.name github-actions[bot]
-          git config pull.rebase false
+          git config pull.rebase true
 
           branch=automated-documentation-update-$GITHUB_RUN_ID
           git checkout -b $branch
