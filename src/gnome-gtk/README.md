@@ -8,6 +8,7 @@ Develop GTK 4 + Libawdaita applications on Linux. Requires Wayland on host
 | Options Id | Description | Type | Default Value |
 |-----|-----|-----|-----|
 | sdkVersion | GNOME SDK version. This matches with the flatpak runtime | string | 49 |
+| hostUserId | Host UID. Needed for mounting the wayland socket | string | undefined |
 
 
 
