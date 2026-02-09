@@ -3,7 +3,7 @@
     "dockerComposeFile": "compose.yaml",
     "service": "app",
     "mounts": [
-        "source=${localEnv:XDG_RUNTIME_DIR}/wayland-0,target=/run/user/1001/wayland-0,type=bind,consistency=delegated"
+        "source=/run/${templateOption:hostUserId}/wayland-0,target=/run/user/1001/wayland-0,type=bind,consistency=delegated"
     ],
     "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
     "remoteUser": "vscode",

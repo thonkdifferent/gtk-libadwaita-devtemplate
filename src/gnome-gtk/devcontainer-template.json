@@ -1,6 +1,6 @@
 {
     "id": "gnome-gtk",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "name": "GNOME app template",
     "publisher": "ThonkDifferent",
     "description": "Develop GTK 4 + Libawdaita applications on Linux. Requires Wayland on host",
@@ -15,6 +15,11 @@
                 "49"
             ],
             "default": "49"
+        },
+        "hostUserId":{
+            "type": "string",
+            "description": "Host UID. Needed for mounting the wayland socket",
+            "required": true
         }
     },
     "keywords":[
