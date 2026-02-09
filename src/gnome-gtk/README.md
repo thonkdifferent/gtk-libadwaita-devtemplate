@@ -1,14 +1,16 @@
-# Development Container for GNOME applications
 
-> [!CAUTION]
-> This container requires a functioning wayland socket on your system. There are some hardcoded values that SHOULD work on most systems. 
-> The container was ONLY tested with AMD GPUs for hardware acceleration. Other GPUs (particularly NVIDIA ones) may not work. PRs are very much welcomed
+# GNOME app template (gnome-gtk)
 
-Develop GNOME apps with GTK4 and Libadwaita on Linux with C. The environment is identical to the flatpak SDK.
+Develop GTK 4 + Libawdaita applications on Linux. Requires Wayland on host
 
 ## Options
 
 | Options Id | Description | Type | Default Value |
 |-----|-----|-----|-----|
-| sdkVersion | GNOME SDK version. This matches with the flatpak SDK | string | 49 |
+| sdkVersion | GNOME SDK version. This matches with the flatpak runtime | string | 49 |
 
+
+
+---
+
+_Note: This file was auto-generated from the [devcontainer-template.json](https://github.com/thonkdifferent/gtk-libadwaita-devtemplate/blob/main/src/gnome-gtk/devcontainer-template.json).  Add additional notes to a `NOTES.md`._
