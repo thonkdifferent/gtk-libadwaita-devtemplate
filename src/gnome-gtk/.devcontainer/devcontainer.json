@@ -1,0 +1,33 @@
+{
+    "name": "GtkRsTest",
+    "dockerComposeFile": "compose.yaml",
+    "service": "app",
+    "workspaceFolder": "/workspaces/gtk-rs-tests",
+    "mounts": [ //probably not needed
+        "source=${localWorkspaceFolder},target=/workspaces/gtk-rs-tests,type=bind,consistency=delegated"
+    ],
+    "remoteUser": "vscode",
+    "postStartCommand": "echo 'if ! pgrep -x dbus-daemon > /dev/null; then eval $(dbus-launch --sh-syntax); else echo \"D-Bus running\"; fi' >> /home/vscode/.bashrc; xdg-user-dirs-update --force",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "bodil.blueprint-gtk",
+                "mesonbuild.mesonbuild",
+                "ms-vscode.cpptools-extension-pack",
+                "bilelmoussaoui.flatpak-vscode"
+            ]
+        }
+    },
+    "containerEnv": {
+        "XDG_MENU_PREFIX":"gnome-",
+        "XDG_SESSION_DESKTOP":"gnome",
+        "XDG_SESSION_TYPE":"wayland",
+        "XDG_CURRENT_DESKTOP":"GNOME",
+        "XDG_SESSION_CLASS":"user",
+        "XDG_RUNTIME_DIR":"/run/user/1001",
+        "WAYLAND_DISPLAY":"wayland-0",
+        "DESTDIR":"${containerWorkspaceFolder}/builddir/app",
+        "XDG_DATA_DIRS":"${containerWorkspaceFolder}/app/share:${containerEnv:XDG_DATA_DIRS}",
+        "DISPLAY":":0"
+    }
+}

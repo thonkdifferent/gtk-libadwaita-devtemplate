@@ -1,0 +1,33 @@
+{
+    "id": "gnome-gtk",
+    "version": "0.0.1",
+    "name": "GNOME app template",
+    "description": "Develop GTK 4 + Libawdaita applications on Linux. Requires Wayland on host",
+    "documentationURL": "https://github.com/thonkdifferent/gtk-libadwaita-devtemplate/tree/main/src/gnome-gtk",
+    "licenseURL": "https://github.com/thonkdifferent/gtk-libadwaita-devtemplate/blob/main/LICENSE",
+    "options": {
+        "sdkVersion": {
+            "type": "string",
+            "description": "GNOME SDK version. This matches with the flatpak runtime",
+            "proposals": [
+                "master",
+                "49"
+            ],
+            "default": "49"
+        }
+    },
+    "keywords":[
+        "GTK",
+        "GNOME",
+        "Libadwaita",
+        "Flatpak"
+    ],
+    "platforms": [
+        "GNOME",
+        "GTK",
+        "Libadwaita",
+        "C",
+        "Python",
+        "Flatpak"
+    ]
+}
