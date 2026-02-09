@@ -22,7 +22,9 @@ jobs:
 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
+      - name: Pull latest changes before pushing
+        run: |
+          git pull --rebase origin ${{ github.head_ref || github.ref_name }}
       - name: Create PR for Documentation
         id: push_image_info
         env:
