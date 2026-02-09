@@ -46,6 +46,7 @@ jobs:
 
           # Push
           if [ "$NO_UPDATES" != "true" ] ; then
+              git pull --rebase origin "$branch" || true
               git push origin "$branch"
               gh pr create --title "$message" --body "$message"
           fi
