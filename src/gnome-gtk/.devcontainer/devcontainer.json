@@ -24,7 +24,7 @@
         "XDG_RUNTIME_DIR":"/run/user/1001",
         "WAYLAND_DISPLAY":"wayland-0",
         "DESTDIR":"${containerWorkspaceFolder}/builddir/app",
-        "XDG_DATA_DIRS":"${containerWorkspaceFolder}/app/share:${containerEnv:XDG_DATA_DIRS}",
+        "XDG_DATA_DIRS":"${containerWorkspaceFolder}/app/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/",
         "DISPLAY":":0"
     }
 }
